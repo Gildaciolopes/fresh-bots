@@ -56,6 +56,8 @@ export default function GuildsList() {
 
   return (
     <div>
+      <a href="/api/auth/signout">Sair</a>
+
       <h3>Seus servidores (guilds)</h3>
       <ul>
         {guilds.map((g) => (
