@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: fresh
+      POSTGRES_PASSWORD: freshpassword
+      POSTGRES_DB: freshdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
